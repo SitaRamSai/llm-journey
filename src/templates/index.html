@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Playground: Learning by Building</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .nav-menu li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .nav-menu li a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the LLM Playground!</h1>
+        <p>This is where we'll learn about Large Language Models by building a hands-on interactive environment.</p>
+
+        <ul class="nav-menu">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Data</a></li>
+            <li><a href="#">Tokenization</a></li>
+            <li><a href="#">Architecture</a></li>
+            <li><a href="#">Generation</a></li>
+            <li><a href="#">Evaluation</a></li>
+        </ul>
+
+        <section id="overview">
+            <h2>Project Overview</h2>
+            <p>
+                Our journey begins! We'll explore the fascinating world of Large Language Models (LLMs) from their foundational concepts to advanced training techniques.
+                Each step will involve building a component of this playground, writing an article, and committing our progress to GitHub.
+            </p>
+            <p>
+                **Current Module:** Module 1 - Project Kick-off & Environment Setup
+            </p>
+        </section>
+
+        <section id="llm-overview">
+            <h2>Module 2: LLM Overview and Foundations</h2>
+            <p>
+                Understanding Large Language Models (LLMs) starts with grasping their fundamental task: **language modeling**. This involves predicting the next word or token in a sequence, a seemingly simple task that, when scaled, enables incredible capabilities.
+            </p>
+            <p>
+                The "largeness" of LLMs refers to their massive number of parameters (billions, even trillions) and the colossal datasets they are trained on. This foundation allows them to learn complex patterns, grammar, semantics, and world knowledge.
+            </p>
+            <h3>Conceptual Overview:</h3>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="/static/img/llm-overview-bytebytego.png" alt="LLM Overview and Language Modeling Diagram" style="max-width: 90%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                    *A high-level view of how massive text data feeds into an LLM, enabling it to perform language modeling – predicting the next token in a sequence.*
+                </p>
+            </div>
+            <p>
+                This diagram, illustrates how raw text data fuels the LLM, whose core function is to generate coherent text by mastering next-token prediction.
+            </p>
+        </section>
+
+        <section id="data-collection">
+            <h2>Module 3: Data Collection - The Fuel for LLMs</h2>
+            <p>
+                The incredible capabilities of Large Language Models stem directly from the vast amounts of text data they are trained on during their **pre-training** phase. This data acts as their "knowledge base" and teaches them the patterns and nuances of human language.
+            </p>
+            <p>
+                Data collection involves gathering petabytes of raw text from diverse sources, each presenting its own challenges related to scale, noise, and potential biases.
+            </p>
+            <h3>Data Collection Pipeline:</h3>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="/static/img/llm-data-collection-bytebytego.png" alt="LLM Data Collection Diagram" style="max-width: 90%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                    *An overview of the data pipeline for LLMs, from massive raw sources to the final training dataset, highlighting common challenges.*
+                </p>
+            </div>
+            <p>
+                Understanding these sources and the inherent challenges is crucial for appreciating the complexity behind building powerful and robust LLMs. The quality and diversity of this initial data profoundly impact the model's eventual performance and behavior.
+            </p>
+        </section>
+
+
+        <section id="data-cleaning">
+            <h2>Module 4: Data Cleaning - Refining the Raw</h2>
+            <p>
+                The massive datasets collected from the internet are inherently "noisy," containing duplicates, low-quality content, boilerplate text, and potential biases. **Data cleaning** is a crucial pre-training step that transforms this raw data into a high-quality, usable dataset, directly impacting an LLM's performance, efficiency, and alignment.
+            </p>
+            <p>
+                This process involves various techniques, from deduplication and boilerplate removal to sophisticated filtering of low-quality or non-target language content.
+            </p>
+            <h3>Data Cleaning Pipeline (ByteByteGo Style):</h3>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="/static/img/llm-data-cleaning-bytebytego.png" alt="LLM Data Cleaning Diagram" style="max-width: 90%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                    *An illustration of the essential data cleaning steps, transforming raw internet text into a refined dataset suitable for LLM training.*
+                </p>
+            </div>
+            <p>
+                Pioneering efforts like RefinedWeb, Dolma, and FineWeb demonstrate the value of meticulously cleaned datasets in building state-of-the-art LLMs, emphasizing that data quality is as vital as quantity.
+            </p>
+        </section>
+
+        <section id="tokenization">
+            <h2>Module 5: Tokenization - The Bridge from Text to Numbers</h2>
+            <p>
+                Before an LLM can process human language, it must convert it into a numerical format. This process is called **tokenization**, where text is broken down into fundamental units called tokens. This is crucial for managing vocabulary size and handling words the model hasn't seen before.
+            </p>
+            <h3>Tokenization Pipeline (ByteByteGo Style):</h3>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="/static/img/llm-tokenization-bytebytego.png" alt="LLM Tokenization Diagram" style="max-width: 90%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                    *A visual explanation of how raw text input undergoes normalization and subword segmentation to become token IDs, the numerical input for LLMs.*
+                </p>
+            </div>
+
+            <h3>Interactive Tokenization Playground</h3>
+            <p>
+                Input any English text below to see how a modern subword tokenizer (BERT's tokenizer in this case) breaks it down into tokens and assigns them unique numerical IDs.
+            </p>
+            <div class="tokenizer-playground">
+                <textarea id="inputText" rows="5" cols="80" placeholder="Enter text to tokenize..."></textarea><br>
+                <button onclick="performTokenization()">Tokenize Text</button>
+                <div id="tokenOutput" style="margin-top: 20px; background-color: #f9f9f9; padding: 15px; border-radius: 5px; border: 1px solid #eee;">
+                    <strong>Original Text:</strong> <span id="originalTextDisplay"></span><br><br>
+                    <strong>Tokens:</strong>
+                    <div id="tokensDisplay" style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px;">
+                        <!-- Tokens will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture">
+            <h2>Module 6: Architecture - Neural Networks & Transformers</h2>
+            <p>
+                The true power of modern LLMs lies in their underlying architecture, primarily the **Transformer** model. This revolutionary design, introduced in 2017, enables efficient processing of long sequences and capturing complex language patterns, overcoming limitations of previous neural network designs.
+            </p>
+            <h3>The Transformer Block (ByteByteGo Style):</h3>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="/static/img/llm-transformer-block-bytebytego.png" alt="Transformer Block Diagram" style="max-width: 90%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                    *A simplified view of a single Transformer block, highlighting Multi-Head Self-Attention, Feed-Forward Networks, Positional Encoding, and residual connections.*
+                </p>
+            </div>
+
+            <h3>Understanding Self-Attention (ByteByteGo Style):</h3>
+            <p>
+                The heart of the Transformer is the **Self-Attention mechanism**, which allows each token in a sequence to weigh the importance of all other tokens when computing its own representation. This is achieved through Query (Q), Key (K), and Value (V) vectors.
+            </p>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="/static/img/llm-self-attention-bytebytego.png" alt="Self-Attention Diagram" style="max-width: 90%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                    *A detailed look at how Self-Attention works, using Query, Key, and Value vectors to compute importance scores and create contextualized word embeddings.*
+                </p>
+            </div>
+            
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li>**Multi-Head Attention:** Allows the model to focus on different aspects of the input simultaneously.</li>
+                <li>**Positional Encoding:** Adds information about the order of words, as attention processes words in parallel.</li>
+                <li>**Encoder-Decoder vs. Decoder-Only:** While the original Transformer had both Encoder (for input processing) and Decoder (for output generation) parts, modern generative LLMs often use a Decoder-Only architecture (e.g., GPT, Llama) which is excellent for predicting the next token.</li>
+            </ul>
+            <p>
+                These architectural innovations are what enable LLMs to handle long sequences, understand context, and generate highly coherent and relevant text.
+            </p>
+        </section>
+
+
+        
+        <script>
+            async function performTokenization() {
+                const inputText = document.getElementById('inputText').value;
+                const tokenOutputDiv = document.getElementById('tokenOutput');
+                const originalTextDisplay = document.getElementById('originalTextDisplay');
+                const tokensDisplay = document.getElementById('tokensDisplay');
+
+                originalTextDisplay.textContent = 'Tokenizing...';
+                tokensDisplay.innerHTML = ''; // Clear previous tokens
+
+                try {
+                    const response = await fetch('/tokenize', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ text: inputText }),
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        originalTextDisplay.textContent = result.original_text;
+                        tokensDisplay.innerHTML = ''; // Clear again before populating
+                        result.tokens.forEach(item => {
+                            const tokenSpan = document.createElement('span');
+                            tokenSpan.style.border = '1px solid #ccc';
+                            tokenSpan.style.padding = '3px 8px';
+                            tokenSpan.style.borderRadius = '3px';
+                            tokenSpan.style.backgroundColor = '#eef';
+                            tokenSpan.style.fontSize = '0.9em';
+                            tokenSpan.style.marginRight = '5px';
+                            tokenSpan.style.marginBottom = '5px';
+                            tokenSpan.title = `ID: ${item.id}`; // Tooltip for ID
+                            tokenSpan.textContent = item.token;
+                            tokensDisplay.appendChild(tokenSpan);
+                        });
+                    } else {
+                        originalTextDisplay.textContent = 'Error: ' + result.error;
+                        tokensDisplay.innerHTML = '<span style="color: red;">Failed to tokenize.</span>';
+                    }
+                } catch (error) {
+                    console.error('Network or server error:', error);
+                    originalTextDisplay.textContent = 'Error: Could not connect to the server.';
+                    tokensDisplay.innerHTML = '<span style="color: red;">Please ensure the Flask server is running.</span>';
+                }
+            }
+        </script>
+
+    </div>
+</body>
+</html>
