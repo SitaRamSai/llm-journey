@@ -46,24 +46,31 @@ We will cover the following topics in sequence, integrating them into the LLM Pl
 
 ## Progress Log
 
+## Progress Log
+
 **Module 1: Project Kick-off & Environment Setup**
 *   **Status:** Completed
 *   **Objective:** Initialized GitHub repository, set up basic project structure, environment, and first web app component.
 *   **Article:** "[Why Build an LLM Playground? A Hands-on Approach to AI Learning](articles/01-why-build-llm-playground.md)"
 *   **Key Learnings:** Setting up project infrastructure, importance of virtual environments, initial web app scaffolding.
-*   **Commit:** [Link to your Module 1 commit on GitHub] (e.g., `https://github.com/SitaRamSai/llm-journey/commit/YOUR_COMMIT_HASH_HERE`)
+*   **Commit:** [Link to your Module 1 commit on GitHub]
 
 **Module 2: LLM Overview and Foundations**
 *   **Status:** Completed
 *   **Objective:** Understood LLM basics, language modeling, and updated the web app with a theoretical overview featuring a ByteByteGo-style diagram.
 *   **Visual Aid:** ByteByteGo-style diagram explaining LLM Overview and Language Modeling.
 *   **Key Learnings:** Core concept of language modeling, what "large" implies in LLMs, high-level function.
-*   **Commit:** [Link to your Module 2 commit on GitHub] (e.g., `https://github.com/SitaRamSai/llm-journey/commit/YOUR_COMMIT_HASH_HERE`)
+*   **Commit:** [Link to your Module 2 commit on GitHub]
 
 **Module 3: Data Collection - The Fuel for LLMs**
-*   **Status:** In Progress
-*   **Objective:** Understand data collection methods and challenges for LLMs, and update the web app with a visual explanation.
+*   **Status:** Completed
+*   **Objective:** Understood data collection methods and challenges for LLMs, and updated the web app with a visual explanation.
 *   **Visual Aid:** ByteByteGo-style diagram illustrating LLM Data Collection.
 *   **Key Learnings:** Scale of LLM data, common sources (Common Crawl), challenges (noise, bias, quality).
----
+*   **Commit:** [Link to your Module 3 commit on GitHub]
 
+**Module 4: Data Cleaning - Refining the Raw**
+*   **Status:** In Progress
+*   **Objective:** Understand the necessity and techniques of data cleaning for LLMs, and update the web app with a visual explanation.
+*   **Visual Aid:** ByteByteGo-style diagram illustrating the data cleaning pipeline.
+*   **Key Learnings:** Importance of clean data, deduplication, boilerplate removal, low-quality filtering, influential datasets (RefinedWeb, Dolma, FineWeb).
