@@ -42,17 +42,19 @@ We will cover the following topics in sequence, integrating them into the LLM Pl
 
 ## Progress Log
 
+## Progress Log
+
 **Module 1: Project Kick-off & Environment Setup**
 *   **Status:** Completed
 *   **Objective:** Initialized GitHub repository, set up basic project structure, environment, and first web app component.
 *   **Article:** "[Why Build an LLM Playground? A Hands-on Approach to AI Learning](articles/01-why-build-llm-playground.md)"
 *   **Key Learnings:** Setting up project infrastructure, importance of virtual environments, initial web app scaffolding.
-*   **Commit:** [Link to your Module 1 commit on GitHub] (You'll add this link once you push the changes from Module 1 if you haven't already, or link to the initial commit.)
+*   **Commit:** [Link to your Module 1 commit on GitHub] (e.g., `https://github.com/SitaRamSai/llm-journey/commit/YOUR_COMMIT_HASH_HERE`)
 
 **Module 2: LLM Overview and Foundations**
 *   **Status:** In Progress
-*   **Objective:** Understand LLM basics, language modeling, and update the web app with a theoretical overview.
-*   **Article:** "Decoding Large Language Models: A High-Level Introduction."
+*   **Objective:** Understand LLM basics, language modeling, and update the web app with a theoretical overview featuring a ByteByteGo-style diagram.
+*   **Visual Aid:** ByteByteGo-style diagram explaining LLM Overview and Language Modeling.
 *   **Key Learnings:** Core concept of language modeling, what "large" implies in LLMs, high-level function.
 ---
 
